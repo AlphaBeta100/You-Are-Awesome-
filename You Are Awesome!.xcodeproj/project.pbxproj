@@ -40,6 +40,7 @@
 		F4A2E8E62A9CE4C200D02D6D = {
 			isa = PBXGroup;
 			children = (
+				F4A43EF12AAB64BB00DCD1B0 /* myPhotos */,
 				F4A2E8F12A9CE4C200D02D6D /* You Are Awesome! */,
 				F4A2E8F02A9CE4C200D02D6D /* Products */,
 			);
@@ -65,6 +66,13 @@
 				F4A2E9002A9CE4C300D02D6D /* Info.plist */,
 			);
 			path = "You Are Awesome!";
+			sourceTree = "<group>";
+		};
+		F4A43EF12AAB64BB00DCD1B0 /* myPhotos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = myPhotos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
