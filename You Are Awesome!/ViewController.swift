@@ -18,9 +18,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func messageButtonPressed(_ sender: UIButton) {
-     //   print("😀 The message Button was pressed!")
+      // print("😀 The message Button was pressed!")
         messageLabel.text = "You Are Awesome!"
-        imageView.image = UIImage(named: "image0")
+        imageView.image = UIImage(named: "image1")
+  /*      imageView.image = UIImage(named: "image0") */
         
     }
     
