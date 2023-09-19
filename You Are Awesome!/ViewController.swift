@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
      //   print("😎 ViewDidLoad has run!")
      //   messageLabel.text = "Fabulous? That's You"
     }
@@ -27,10 +28,19 @@ class ViewController: UIViewController {
     //  the next two lines concatenate a Int to a string
     //  let imageName = "image" + String(imageNumber)
         let imageName = "image\(imageNumber)"
+        var messageArray = ["You Are Awesome!",
+                            "You Make Me Happy!",
+                            "You Are The Best!",
+                            "You Are Great!",
+                            "You Never Make Me Sad!"]
         
+    // Removed one messageArray element without changing rest of code
+        var removeMessage = messageArray.remove(at: 4)
+        messageLabel.text = messageArray[imageNumber]
         imageView.image = UIImage(named: imageName)
         imageNumber = imageNumber + 1
-        if imageNumber == 5 {
+     //   if imageNumber == 5 {
+        if imageNumber == messageArray.count {
             imageNumber = 0
         }
         
