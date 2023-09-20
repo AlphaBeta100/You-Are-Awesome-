@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     
     var imageNumber: Int = 0
+    var messageNumber: Int = 0
+    let totalNumberOfImages = 4
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,27 +24,32 @@ class ViewController: UIViewController {
     }
 
     @IBAction func messageButtonPressed(_ sender: UIButton) {
-        
-        print(imageNumber)
+        var messageArray = ["You Are Awesome!",
+                            "You Are Great",
+                            "You Are Fantastic!",
+                            "When the Genius Bar Needs Help, They Call You!",
+                            "Fabulous? That's You!",
+                            "You've got The Design Skills of Jony Ive",]
+        messageLabel.text =  messageArray[Int.random(in: 0...messageArray.count - 1)]
+
+        imageView.image = UIImage(named: "image\(Int.random(in: 0...4))")
+    //    print(imageNumber)
         
     //  the next two lines concatenate a Int to a string
     //  let imageName = "image" + String(imageNumber)
-        let imageName = "image\(imageNumber)"
-        var messageArray = ["You Are Awesome!",
-                            "You Make Me Happy!",
-                            "You Are The Best!",
-                            "You Are Great!",
-                            "You Never Make Me Sad!"]
+    //    let imageName = "image\(imageNumber)"
+           
+     
         
     // Removed one messageArray element without changing rest of code
-        var removeMessage = messageArray.remove(at: 4)
-        messageLabel.text = messageArray[imageNumber]
-        imageView.image = UIImage(named: imageName)
-        imageNumber = imageNumber + 1
+    //    var removeMessage = messageArray.remove(at: 4)
+    //    messageLabel.text = messageArray[imageNumber]
+    //    imageView.image = UIImage(named: imageName)
+    //    imageNumber = imageNumber + 1
      //   if imageNumber == 5 {
-        if imageNumber == messageArray.count {
-            imageNumber = 0
-        }
+     //   if imageNumber == messageArray.count {
+      //      imageNumber = 0
+      //  }
         
         
         //        let awesomeMessage = "You Are Awesome!"
