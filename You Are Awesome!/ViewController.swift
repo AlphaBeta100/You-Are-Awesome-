@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet var messageLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     
+    @IBOutlet var playSoundSwitch: UISwitch!
     var imageNumber: Int = -1
     var messageNumber: Int = -1
     var soundNumber: Int = -1
@@ -89,11 +90,19 @@ class ViewController: UIViewController {
             soundNumber = newSoundNumber
             print("*** The new Sound Number is \(soundNumber)")
 */
-            playSound(name: "sound\(soundNumber)")
+            if playSoundSwitch.isOn { // if playSoundSwich is on
+                playSound(name: "sound\(soundNumber)") // then play the sound
+            }
             
             
         }
         
+    @IBAction func PlaySoundToggle(_ sender: UISwitch) {
+        // if the .isOn is not true && the audioplayer is not nil
+        if !sender.isOn && audioPlayer != nil {
+                audioPlayer.stop()  // stop playing audioPlayer
+        }
     }
+}
     
 
